@@ -7,6 +7,6 @@ import (
 
 func GetIndex(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, gin.H{
-		"message": "welcome !!",
+		"message": "index is here !!",
 	})
 }
