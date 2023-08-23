@@ -1,2 +1,9 @@
 mysql:
   dsn: root:123@tcp(127.0.0.1:3307)/ginchat?charset=utf8mb4&parseTime=True&loc=Local
+redis:
+  addr: 127.0.0.1:6378
+  password: 123456
+kafka:
+  addr: 192.168.242.128:9092
+  topics: [la_msg]
+  consumer_group: save_group

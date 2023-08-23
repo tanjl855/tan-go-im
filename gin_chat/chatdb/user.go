@@ -19,7 +19,7 @@ func CreateUser(user *models.UserBasic) (*gorm.DB, error) {
 
 func FindUserByNameAndPwd(name, password string) models.UserBasic {
 	user := models.UserBasic{}
-	utils.DB.Where("Name = ? and password = ?", name, password).First(&user)
+	utils.DB.Where("name = ? and password = ?", name, password).First(&user)
 
 	// token加密
 	str := fmt.Sprintf("%d", time.Now().Unix())
@@ -31,18 +31,18 @@ func FindUserByNameAndPwd(name, password string) models.UserBasic {
 
 func FindUserByName(name string) models.UserBasic {
 	user := models.UserBasic{}
-	utils.DB.Where("Name = ?", name).First(&user)
+	utils.DB.Where("name = ?", name).First(&user)
 	return user
 }
 
 func FindUserByPhone(phone string) *gorm.DB {
 	user := models.UserBasic{}
-	return utils.DB.Where("Phone = ?", phone).First(&user)
+	return utils.DB.Where("phone = ?", phone).First(&user)
 }
 
 func FindUserByEmail(email string) *gorm.DB {
 	user := models.UserBasic{}
-	return utils.DB.Where("Email = ?", email).First(&user)
+	return utils.DB.Where("email = ?", email).First(&user)
 }
 
 func GetUserList() []*models.UserBasic {

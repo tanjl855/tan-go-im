@@ -1,0 +1,4 @@
+{"level":"info","time":"2023/08/24 - 04:09:46.919","ChatLog":"初始化日志"}
+{"level":"panic","time":"2023/08/24 - 04:09:46.919","ChatLog":"lalala&{0xc0001314a0 true false <nil>  0xc000116300 6 0 {}}","caller":"D:/goland_project/tan-go-im/pkg/im_log/log_test.go:7"}
+{"level":"info","time":"2023/08/24 - 04:10:06.365","ChatLog":"初始化日志"}
+{"level":"panic","time":"2023/08/24 - 04:10:06.365","ChatLog":"lalala&{0xc0000b74a0 true false <nil>  0xc00009c318 6 0 {}}","caller":"D:/goland_project/tan-go-im/pkg/im_log/log_test.go:7"}

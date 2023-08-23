@@ -1,0 +1,36 @@
+app:
+  name: tanjl_im_receive_dev
+  version: 1.0.0
+  host: ""
+  run_mode: debug
+  auth:
+    secret: lalala
+server:
+  http:
+    port: 3001
+    read_timeout: 10
+    write_timeout: 10
+data:
+  mongo:
+    url: mongodb://cny:123@127.0.0.1:27018/?authSource=admin
+    database: im_srv
+  redis:
+    addr: 127.0.0.1:6378
+    password: 123456
+log:
+  log_path:
+  log_level: errors
+  log_encode_mod: console
+  is_console: true
+
+third_party:
+  email:
+    sender:
+    name:
+    pass:
+    host: smtp.163.com
+    port: 465
+  ali_oss:
+    access_key_id:
+    access_key_secret:
+    endpoint: oss-cn-beijing.aliyuncs.com
