@@ -5,18 +5,19 @@ import (
 	"gin_chat/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"time"
 )
 
 func main() {
 	db, err := gorm.Open(mysql.Open("root:123@tcp(127.0.0.1:3307)/ginchat?charset=utf8mb4&parseTime=True&loc=Local"), &gorm.Config{})
 	if err != nil {
-		fmt.Printf("[E] connect mysql error:%v", err)
-		return
+		panic("failed to connect database")
 	}
 	db.AutoMigrate(&models.UserBasic{})
 
 	user := &models.UserBasic{}
 	user.Name = "tanjl"
+	user.LoginTime = time.Now().Unix()
 
 	db.Create(user)
 

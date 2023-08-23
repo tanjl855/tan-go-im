@@ -2,7 +2,6 @@ package models
 
 import (
 	"gorm.io/gorm"
-	"time"
 )
 
 type UserBasic struct {
@@ -14,10 +13,10 @@ type UserBasic struct {
 	Identity      string
 	ClientIp      string
 	ClientPort    string
-	LoginTime     time.Time
-	HeartbeatTime time.Time
-	LogOutTime    time.Time `gorm:"column:login_out_time" json:"login_out_time"`
-	IsLogout      int       // -1 out, 0 no out
+	LoginTime     int64
+	HeartbeatTime int64
+	LogOutTime    int64 `gorm:"column:login_out_time" json:"login_out_time"`
+	IsLogout      int   // -1 out, 0 no out
 	DeviceInfo    string
 	IsAdmin       int
 }
