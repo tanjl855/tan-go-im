@@ -17,6 +17,10 @@ func Router() *gin.Engine {
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	r.GET("/index", chatapi.GetIndex)
+	r.GET("/user/createUser", chatapi.CreateUser)
 	r.GET("/user/getUserList", chatapi.GetUserList)
+	r.GET("/user/deleteUser", chatapi.DeleteUser)
+	r.POST("/user/updateUser", chatapi.UpdateUser)
+	r.POST("/user/findByNameAndPwd", chatapi.FindByUserNameAndPwd)
 	return r
 }
