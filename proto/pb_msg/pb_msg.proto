@@ -1,0 +1,30 @@
+syntax = "proto3";
+option go_package = "./;pb_msg";
+package pb_msg;
+
+message Msg{
+  string  sendID = 1; //发送者id
+  string  recvID = 2;
+  string groupID = 3;
+  int32 senderPlatformID = 4;//发送者平台ID，暂时无用
+  string  senderNickname = 5;
+  string  senderFaceURL = 6;
+  int32   sessionType = 7; //会话类型，0为单人，1为群组
+  int32 contentType = 8;
+  string content = 9;
+  int64 sendTime = 10;
+  int32 status = 11;
+  bytes file = 12;
+  string fileName = 13;
+  int32 fileSize = 14;
+  string selfID = 15;//获取历史消息时的接收UID
+}
+
+message ErrRsp{
+  int32 errCode = 1;
+  string errMsg = 2;
+}
+
+service MsgServer{
+  rpc Push(Msg) returns(ErrRsp);
+}
