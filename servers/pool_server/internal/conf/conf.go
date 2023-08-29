@@ -83,7 +83,7 @@ type (
 var Bootstrap = &Config{}
 
 func init() {
-	err := cleanenv.ReadConfig("D:\\Goland_project\\tan-go-im\\configs\\pool_server_conf.yml", Bootstrap)
+	err := cleanenv.ReadConfig("D:\\Goland_project\\tan_go_im\\configs\\pool_server_conf.yml", Bootstrap)
 	if err != nil {
 		panic(err)
 	}
