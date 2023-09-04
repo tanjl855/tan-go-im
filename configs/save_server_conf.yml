@@ -29,7 +29,7 @@ data:
     addr: 127.0.0.1:6378
     password: 123456
   kafka:
-    addr: 127.0.0.1:9093
+    addr: 127.0.0.1:9092
     topics: [im_msg]
     consumer_group: save_group
 

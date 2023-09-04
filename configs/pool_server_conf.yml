@@ -7,7 +7,7 @@ app:
     secret: lalala
 server:
   http:
-    out_addr: 192.168.3.10:31002
+    out_addr: 127.0.0.1:31002
     port: 31002
     read_timeout: 10
     write_timeout: 10
@@ -32,7 +32,7 @@ data:
     addr: 127.0.0.1:6378
     password: 123456
   kafka:
-    addr: 127.0.0.1:9093
+    addr: 127.0.0.1:9092
     topics: [im_msg]
 
 
